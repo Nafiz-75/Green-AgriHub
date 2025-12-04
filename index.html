@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Green AgriHub | Advancing Bangladeshi Agriculture</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="text-gray-800">
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="#" class="flex-shrink-0 flex items-center">
+                    <svg class="h-8 w-8 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 005 18.067V21h12v-2.933a12.02 12.02 0 001.618-11.02z" />
+                    </svg>
+                    <span class="ml-2 text-xl font-bold text-gray-900">Green AgriHub</span>
+                </a>
+
+                <div class="hidden md:flex space-x-4">
+                    <a href="#hero" class="text-gray-600 hover:text-green-600 px-3 py-2 rounded-md text-sm font-medium transition duration-150">Home</a>
+                    <a href="#crops" class="text-gray-600 hover:text-green-600 px-3 py-2 rounded-md text-sm font-medium transition duration-150">Key Crops</a>
+                    <a href="#services" class="text-gray-600 hover:text-green-600 px-3 py-2 rounded-md text-sm font-medium transition duration-150">Services</a>
+                    <a href="#contact" class="text-gray-600 hover:text-green-600 px-3 py-2 rounded-md text-sm font-medium transition duration-150">Contact</a>
+                </div>
+
+                <button id="mobile-menu-button" type="button" class="md:hidden inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-green-500" aria-controls="mobile-menu" aria-expanded="false">
+                    <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <div class="md:hidden hidden" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#hero" class="text-gray-700 hover:bg-green-50 hover:text-green-700 block px-3 py-2 rounded-md text-base font-medium">Home</a>
+                <a href="#crops" class="text-gray-700 hover:bg-green-50 hover:text-green-700 block px-3 py-2 rounded-md text-base font-medium">Key Crops</a>
+                <a href="#services" class="text-gray-700 hover:bg-green-50 hover:text-green-700 block px-3 py-2 rounded-md text-base font-medium">Services</a>
+                <a href="#contact" class="text-gray-700 hover:bg-green-50 hover:text-green-700 block px-3 py-2 rounded-md text-base font-medium">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <header id="hero" class="hero-bg py-20 md:py-32 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="hero-text-shadow text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight mb-4">
+                Cultivating Prosperity in Bangladesh
+            </h1>
+            <p class="hero-text-shadow text-xl sm:text-2xl mb-8 max-w-3xl mx-auto opacity-90">
+                Your central hub for sustainable farming practices, market insights, and modern agricultural technology tailored for Bangladesh.
+            </p>
+            <a href="#services" class="inline-block bg-white text-green-700 font-bold py-3 px-8 rounded-full shadow-lg hover:bg-gray-100 transition duration-300 transform hover:scale-105">
+                Explore Our Solutions
+            </a>
+        </div>
+    </header>
+
+    <section id="crops" class="py-16 md:py-24">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl sm:text-4xl font-bold text-center mb-4 text-green-800">Essential Crops of Bangladesh</h2>
+            <p class="text-center text-gray-600 mb-12 max-w-3xl mx-auto">Learn about the backbone of the nation's economy and food security.</p>
+            
+            <div id="crop-cards-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                </div>
+            
+            <div class="text-center mt-12">
+                <button onclick="loadMoreCrops()" class="bg-green-600 text-white py-3 px-6 rounded-lg shadow-md hover:bg-green-700 transition duration-300">
+                    Show More Crops
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="bg-gray-50 py-16 md:py-24">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl sm:text-4xl font-bold text-center mb-4 text-green-800">Our Core Services</h2>
+            <p class="text-center text-gray-600 mb-12 max-w-3xl mx-auto">We provide tailored support to help farmers increase yield and sustainability.</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <div class="feature-card bg-white p-6 rounded-xl shadow-lg border-t-4 border-green-600">
+                    <div class="flex items-center justify-center h-12 w-12 rounded-full bg-green-100 text-green-600 mb-4">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" /></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-900">Real-time Market Prices</h3>
+                    <p class="text-gray-600">Get up-to-the-minute price data for key commodities across different Bangladeshi markets to maximize profit.</p>
+                </div>
+
+                <div class="feature-card bg-white p-6 rounded-xl shadow-lg border-t-4 border-green-600">
+                    <div class="flex items-center justify-center h-12 w-12 rounded-full bg-green-100 text-green-600 mb-4">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" /></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-900">Modernization & Tech</h3>
+                    <p class="text-gray-600">Access guides and resources on irrigation systems, soil testing, and climate-resilient farming methods.</p>
+                </div>
+
+                <div class="feature-card bg-white p-6 rounded-xl shadow-lg border-t-4 border-green-600">
+                    <div class="flex items-center justify-center h-12 w-12 rounded-full bg-green-100 text-green-600 mb-4">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" /></svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-gray-900">Pest & Disease Advisory</h3>
+                    <p class="text-gray-600">Instant consultation and diagnosis tools for common crop diseases and effective, eco-friendly pest control strategies.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 md:py-20 bg-green-700 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <blockquote class="text-2xl italic font-light max-w-4xl mx-auto">
+                "Agriculture is the foundation of our civilization and economy. Investing in our farmers is investing in the future of Bangladesh."
+            </blockquote>
+            <footer class="mt-4 text-lg font-medium opacity-80">— A Bangladeshi Agricultural Expert</footer>
+        </div>
+    </section>
+
+    <section id="contact" class="py-16 md:py-24">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <h2 class="text-3xl sm:text-4xl font-bold text-center mb-4 text-green-800">Get In Touch</h2>
+            <p class="text-center text-gray-600 mb-12">Have a question or need expert advice? Contact our team.</p>
+
+            <form class="bg-white p-8 rounded-xl shadow-2xl border border-gray-100">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Full Name</label>
+                        <input type="text" id="name" name="name" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-green-500 focus:border-green-500 transition duration-150">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email Address</label>
+                        <input type="email" id="email" name="email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-green-500 focus:border-green-500 transition duration-150">
+                    </div>
+                </div>
+                <div class="mb-6">
+                    <label for="subject" class="block text-sm font-medium text-gray-700 mb-2">Subject</label>
+                    <input type="text" id="subject" name="subject" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-green-500 focus:border-green-500 transition duration-150">
+                </div>
+                <div class="mb-8">
+                    <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Your Message</label>
+                    <textarea id="message" name="message" rows="5" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-green-500 focus:border-green-500 transition duration-150"></textarea>
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="w-full md:w-auto bg-green-600 text-white font-bold py-3 px-10 rounded-lg shadow-xl hover:bg-green-700 transition duration-300 transform hover:scale-[1.02]">
+                        Send Message
+                    </button>
+                    <div id="form-message" class="mt-4 p-3 rounded-lg text-sm hidden" role="alert"></div>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4 text-center">
+            <div class="mb-6 space-x-6 text-sm">
+                <a href="#hero" class="hover:text-green-400 transition duration-150">Home</a>
+                <a href="#crops" class="hover:text-green-400 transition duration-150">Crops</a>
+                <a href="#services" class="hover:text-green-400 transition duration-150">Services</a>
+                <a href="#" class="hover:text-green-400 transition duration-150">Privacy Policy</a>
+            </div>
+            <p class="text-gray-400 text-sm">&copy; 2025 Green AgriHub. Cultivating the future of Bangladesh.</p>
+        </div>
+    </footer>
+
+    <script src="Script.js"></script>
+</body>
+</html>
