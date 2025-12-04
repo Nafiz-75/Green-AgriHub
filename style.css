@@ -1,0 +1,30 @@
+/* CSS START: Custom Styles */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f7fbf8; /* Very light green background */
+}
+
+/* Custom background gradient for the hero section */
+.hero-bg {
+    background-image: linear-gradient(135deg, #065F46 0%, #10B981 100%); /* Dark green to Emerald */
+    position: relative;
+    overflow: hidden;
+}
+
+/* Hero text shadow for better contrast */
+.hero-text-shadow {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+/* Custom card style */
+.feature-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(16, 185, 129, 0.3); /* Emerald shadow on hover */
+}
+/* CSS END: Custom Styles */
